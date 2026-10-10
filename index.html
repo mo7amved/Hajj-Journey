@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>رحلة عمرة – احجز عمرتك في دقيقة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500;700&family=Tajawal:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="hero">
+      <div class="wrap" style="display: block; padding-bottom: 0">
+        <header>
+          <div class="logo">رحلة <span>عمرة</span></div>
+          <nav>
+            <a href="#why">المميزات</a><a href="#packages">الباقات</a
+            ><a href="#steps">خطوات الحجز</a>
+          </nav>
+        </header>
+      </div>
+      <div class="wrap">
+        <div>
+          <h1>عمرتك تبدأ بحجز من دقيقة واحدة</h1>
+          <p>
+            تأشيرة، طيران، إقامة قرب الحرم ومرشد معاك طول الرحلة. إنت بس انوي،
+            وإحنا نرتب الباقي.
+          </p>
+          <div class="nums">
+            <div>+12,000<small>معتمر سافر معنا</small></div>
+            <div>15 سنة<small>خبرة في الحج والعمرة</small></div>
+            <div>24/7<small>دعم أثناء الرحلة</small></div>
+          </div>
+        </div>
+        <form class="book" id="f" onsubmit="return go(event);">
+          <h2>احجز الآن</h2>
+          <label for="n">الاسم الكامل</label
+          ><input id="n" required autocomplete="name" />
+          <label for="p">رقم الواتساب</label
+          ><input
+            id="p"
+            type="tel"
+            inputmode="tel"
+            required
+            autocomplete="tel"
+          />
+          <div class="row">
+            <div>
+              <label for="k">الباقة</label>
+              <select id="k">
+                <option value="14500">اقتصادية</option>
+                <option value="21000" selected>مميزة</option>
+                <option value="33000">VIP</option>
+              </select>
+            </div>
+            <div>
+              <label for="c">عدد المعتمرين</label
+              ><input
+                id="c"
+                type="number"
+                min="1"
+                max="20"
+                value="1"
+                required
+              />
+            </div>
+          </div>
+          <label for="d">موعد السفر</label><input id="d" type="date" required />
+          <div class="total">
+            <span>الإجمالي التقريبي</span><b id="t">21,000 ج.م</b>
+          </div>
+          <button type="submit">أكّد الحجز</button>
+          <div id="ok" role="status"></div>
+        </form>
+      </div>
+    </div>
+
+    <section id="why">
+      <div class="wrap">
+        <h2>ليه تعمل عمرتك معنا؟</h2>
+        <p class="sub">كل اللي محتاجه في مكان واحد، من الحجز لحد الرجوع.</p>
+        <div class="grid">
+          <div class="feat">
+            <h3>تأشيرة في 48 ساعة</h3>
+            <p>نجهز الأوراق ونتابع التأشيرة بدل ما تلف على المكاتب.</p>
+          </div>
+          <div class="feat">
+            <h3>فنادق قريبة من الحرم</h3>
+            <p>إقامة على بعد دقائق مشي، وإفطار وعشاء مشمولين.</p>
+          </div>
+          <div class="feat">
+            <h3>مرشد ديني مرافق</h3>
+            <p>شيخ يشرح المناسك خطوة بخطوة ويجاوب أسئلتك في أي وقت.</p>
+          </div>
+          <div class="feat">
+            <h3>أسعار واضحة</h3>
+            <p>السعر المكتوب هو اللي تدفعه، من غير رسوم مخفية.</p>
+          </div>
+          <div class="feat">
+            <h3>تقسيط بدون فوايد</h3>
+            <p>قسّم المبلغ على 6 شهور بدون زيادة على السعر.</p>
+          </div>
+          <div class="feat">
+            <h3>مواصلات مجهزة</h3>
+            <p>استقبال في المطار وتنقل بين مكة والمدينة بأتوبيسات مكيفة.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="packages" style="padding-top: 0">
+      <div class="wrap">
+        <h2>اختار الباقة المناسبة</h2>
+        <p class="sub">الأسعار للفرد في الغرفة الرباعية، بالجنيه المصري.</p>
+        <div class="grid">
+          <div class="pk">
+            <h3>اقتصادية</h3>
+            <div class="pr">14,500 <small>ج.م</small></div>
+            <ul>
+              <li>10 أيام (4 مكة / 4 المدينة)</li>
+              <li>فندق 3 نجوم، 700 متر من الحرم</li>
+              <li>طيران اقتصادي</li>
+              <li>تأشيرة وتأمين</li>
+            </ul>
+            <a href="#f" onclick="pick(0)">احجز هذه الباقة</a>
+          </div>
+          <div class="pk top">
+            <h3>مميزة – الأكثر طلباً</h3>
+            <div class="pr">21,000 <small>ج.م</small></div>
+            <ul>
+              <li>12 يوم (6 مكة / 4 المدينة)</li>
+              <li>فندق 4 نجوم، 250 متر من الحرم</li>
+              <li>طيران مباشر</li>
+              <li>تأشيرة، تأمين، ومرشد</li>
+            </ul>
+            <a href="#f" onclick="pick(1)">احجز هذه الباقة</a>
+          </div>
+          <div class="pk">
+            <h3>VIP</h3>
+            <div class="pr">33,000 <small>ج.م</small></div>
+            <ul>
+              <li>14 يوم (7 مكة / 5 المدينة)</li>
+              <li>فندق 5 نجوم، إطلالة على الحرم</li>
+              <li>درجة رجال الأعمال</li>
+              <li>كل الخدمات + سيارة خاصة</li>
+            </ul>
+            <a href="#f" onclick="pick(2)">احجز هذه الباقة</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="steps" style="padding-top: 0">
+      <div class="wrap">
+        <h2>خطوات الحجز</h2>
+        <p class="sub">أربع خطوات وتكون جاهز للسفر.</p>
+        <div class="steps">
+          <div>
+            <h3>املأ النموذج</h3>
+            اختار الباقة والموعد واكتب بياناتك.
+          </div>
+          <div>
+            <h3>نكلمك</h3>
+            فريقنا يتواصل معاك على الواتساب لتأكيد التفاصيل.
+          </div>
+          <div>
+            <h3>ارفع الأوراق</h3>
+            صورة جواز السفر وصورة شخصية فقط.
+          </div>
+          <div>
+            <h3>سافر واعتمر</h3>
+            نستقبلك في المطار والمرشد معاك لحد العودة.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <b>رحلة عمرة</b> – ترخيص وزارة السياحة رقم 0000 &nbsp;|&nbsp; واتساب:
+        01000000000 &nbsp;|&nbsp; جميع الحقوق محفوظة
+      </div>
+    </footer>
+
+    <script>
+      var k = document.getElementById("k"),
+        c = document.getElementById("c"),
+        t = document.getElementById("t");
+      function calc() {
+        var v = +k.value * (+c.value || 1);
+        t.textContent = v.toLocaleString("ar-EG") + " ج.م";
+      }
+      k.onchange = c.oninput = calc;
+      calc();
+      function pick(i) {
+        k.selectedIndex = i;
+        calc();
+      }
+      document.getElementById("d").min = new Date().toISOString().slice(0, 10);
+      function go(e) {
+        e.preventDefault();
+        var o = document.getElementById("ok");
+        o.style.display = "block";
+        o.textContent =
+          "تم استلام طلبك يا " +
+          document.getElementById("n").value +
+          ". هنتواصل معاك على واتساب خلال ساعات لتأكيد الحجز. الإجمالي: " +
+          t.textContent;
+        return false;
+      }
+    </script>
+  </body>
+</html>
